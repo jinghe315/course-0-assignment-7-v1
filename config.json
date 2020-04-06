@@ -1,0 +1,160 @@
+{
+  "version": 1.0,
+  "title": "Assignment 7: Advanced Conditionals, Incremental / Decremental operators, and Else Statements",
+  "quiz": [
+    {
+      "question": "What is the final value of `counter`?\n\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n  int counter = 12;\n  counter++;\n\n  return 0;\n}\n```",
+      "options": [
+        {
+          "value": "12",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "13",
+          "answer": true,
+          "explanation": "Correct! The value is 13 because `counter++;` is equivalent to writing `counter = counter + 1;`."
+        },
+        {
+          "value": "11",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "There is an error and the code will not run.",
+          "answer": false,
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "question": "What is the final value of `counter`?\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n  const int counter = 12;\n  counter++;\n\n  return 0;\n}\n```",
+      "options": [
+        {
+          "value": "12",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "13",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "11",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "There is an error and the code will not run.",
+          "answer": true,
+          "explanation": "Correct! `counter` is `const`, thus it cannot be modified via `counter++`."
+        }
+      ]
+    },
+    {
+      "question": "What will this program print to console?\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n  int value_one = 21;\n  float value_two = 13.5;\n\n  if (value_one < 100 && value_two > 0) {\n    cout << \"1 is true | \";\n  } else if (value_two < 100) {\n    cout << \"2 is true | \";\n  } else {\n    cout << \"None are true\";\n  }\n  return 0;\n}\n```",
+      "options": [
+        {
+          "value": "`1 is true |`",
+          "answer": false,
+          "explanation": "Almost! Look more carefully at what is printed out and see if you can spot the difference."
+        },
+        {
+          "value": "`1 is true | 2 is true |`",
+          "answer": false,
+          "explanation": "The first `if` statement is `true` the `else if` and `else` are skipped over. Remember, only one block will be executed in an `if/else if/else` block."
+        },
+        {
+          "value": "`2 is true | None are true`",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "`None are true`",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "`1 is true | `",
+          "answer": true,
+          "explanation": "Correct! `value_one` is less then `100` and `value_two` is greater then `0`, thus the first `if` statement is `true` and its message is printed out. Since the first `if` statement is true none of the following `else if` or `else` statements are even checked and none of their code blocks are run."
+        },
+        {
+          "value": "`2 is true |`",
+          "answer": false,
+          "explanation": ""
+        }
+      ]
+    }
+  ],
+  "fix_code": [
+    {
+      "question": "This code isn't formatted correctly! Can you help fix it?",
+      "hints": [
+        {
+          "line_number": 16,
+          "hint": "`if` `else if` and `else` should be on the same line as `{}`."
+        }
+      ]
+    },
+    {
+      "question": "This code isn't compiling correctly! Can you help fix it? Be sure to also address any formatting errors.",
+      "hints": [
+        {
+          "line_number": 8,
+          "hint": "`else` statements do not have conditionals."
+        },
+        {
+          "line_number": 14,
+          "hint": "The `GetUserInput` function is not defined."
+        }
+      ]
+    },
+    {
+      "question": "This code isn't compiling correctly! Can you help fix it? Be sure to also address any formatting errors.",
+      "hints": [
+        {
+          "line_number": 6,
+          "hint": "The function `GetLetterFromUser` is not defined! Create the function."
+        },
+        {
+          "line_number": 8,
+          "hint": "`else if` statements must follow a `if` statement."
+        },
+        {
+          "line_number": 10,
+          "hint": "The function `IsVowel` is not defined! Create the function."
+        }
+      ]
+    },
+    {
+      "question": "This code isn't running correctly! Can you help fix it? Be sure to also address any formatting or syntax errors.",
+      "hints": [
+        {
+          "line_number": -1,
+          "hint": "`else if` blocks will only run if the `if` blocks it follows is `false`. If you want to check something indpendently it should be its own `if` block."
+        }
+      ]
+    },
+    {
+      "question": "This code isn't running correctly! Can you help fix it? Be sure to also address any formatting or syntax errors.",
+      "hints": [
+        {
+          "line_number": -1,
+          "hint": "Is the problem producing the answer it's printing out?"
+        }
+      ]
+    }
+  ],
+  "invent_code": [
+    {
+      "question": "Lets create a fortune generator! In order to generate a fortune, we're going to first need to create a random number. We have some functions that are partially complete for you. Can you take it from here?",
+      "hints": []
+    },
+    {
+      "question": "Write a function named `Evaluator` which takes in a an input `Y`, prints out all numbers 1 - 10 which evenly divide that number, and returns the total number of numbers that you printed.\n\nExample: For `Y = 12`, `Evaluator` should print out `1, 2, 3, 4, 6` and return the number `5`.\n\nExample: For `Y = 99`, `Evaluator` should print out `1, 3, 9` and return the number `3`.",
+      "hints": []
+    }
+  ]
+}
