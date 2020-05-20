@@ -2,6 +2,13 @@
 #include <string>
 using namespace std;
 
+int get_user_input() {
+  std::cout << "Enter a number: ";
+  int input; 
+  cin >> input; 
+  return input; 
+}
+
 int main() {
   int number = get_user_input();
 
@@ -13,7 +20,7 @@ int main() {
     value++;
   }
   if (number % 3 == 0) {
-    value--;
+    value++;
   }
   if (number % 4 == 0) {
     value++;
@@ -28,7 +35,7 @@ int main() {
     value++;
   }
 
-  cout << "The number of multiples less than 10 for " << number " is: " << value << endl;
+  cout << "The number of multiples less than 10 for " << number << " is: " << value << endl;
 
   return 0;
 }

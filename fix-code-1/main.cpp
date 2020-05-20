@@ -2,10 +2,17 @@
 #include <string>
 using namespace std;
 
-float GetAbsoluteValue(const float input) {
+float GetUserInput (){
+  std::cout << "Enter a number: ";
+  int input; 
+  cin >> input; 
+  return input; 
+}
+
+float GetAbsoluteValue(float input) {
   if (input < 0) {
     return -1 * input;
-  } else (input >= 0) {
+  } else {
     return input;
   }
 }
